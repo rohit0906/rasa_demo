@@ -1,0 +1,46 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+  
+intents:
+- greet
+- goodbye
+- bot_challenge
+- corona_into
+- novel_virus
+- high_risk
+- corona_intro
+
+entities:
+ - location
+ - facility_type
+ 
+actions:
+- action_facility_search
+
+slots:
+    location:
+        type:text
+    facility_type:
+        type:text
+ 
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_corona_intro:
+  - text: Coronaviruses are a large group of viruses that are common among animals.
+      In rare cases, they are what scientists call zoonotic, meaning they can be transmitted
+      from animals to humans, according to the US Centers for Disease Control and
+      Prevention.
+  utter_risk:
+  - text: The elderly and people with diseases.
+  utter_novel:
+  - text: A novel coronavirus is a new coronavirus that has not been previously identified.
+      The virus causing coronavirus disease 2019 (COVID-19), is not the same as the
+      coronaviruses that commonly circulate among humans and cause mild illness, like
+      the common cold.
